@@ -1,4 +1,4 @@
-# WhereCanWeGo
+# OccasionLocation
 Bachelors Dissertation Project @ University of Westminster
 
 This is my dissertation project for my bachelors degree. A website designed for users to be able to search for events happening within their local area. 
