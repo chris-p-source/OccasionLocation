@@ -17,7 +17,8 @@ Project is built with a Python and Django backend with a HTML, CSS and JavaScrip
 
 Project last updated April 2021.
 
-
+<h2>Screenshot of homepage:</h2> 
+  
 ![image](https://user-images.githubusercontent.com/71994140/221077796-285bf9ca-cd9c-45f1-b59b-dafeda82a9e1.png)
 
 
