@@ -5,7 +5,7 @@ This is my dissertation project for my bachelors degree. A website designed for 
 
 Project is built with a Python and Django backend with a HTML, CSS and JavaScript frontend.
 
-#Core features:  
+<h2>Core features:</h2>  
 • Users are able to register and log in.  
 • Users are able to search for events via name, date and location.  
 • Users are able to view a details page about each event in which they are able to sign up for it.   
