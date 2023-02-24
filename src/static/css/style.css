@@ -1,0 +1,1503 @@
+{% load static %}
+
+body {
+	background-color: white; 
+}
+/*Declaring page size */
+.container {
+	width: auto;
+	margin: auto;
+	position:relative;
+	min-height: 100vh;
+}
+/*Setting background of header */
+header {
+	background: #fff;
+
+
+}
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/* Positioning logo for logo and colour specifications aswell as font type and weight */
+#logo {
+	float: left;
+	color: white;
+	padding: 0px 0px 0px 20px;
+	
+	font-weight: bold;
+}
+/* Moving nav list to the right of the nav bar */
+nav {
+	float: right;
+
+}
+
+/* Specifying the margin, padding and list style of the list */
+nav ul {
+	margin: 0;
+	padding: 10px 0px 0px 0px;
+	list-style: none;
+}
+/* Specifying position of the list items after they have been moved to the right */
+nav li {
+	float: left;
+	
+	padding-top: 20px;
+	padding-right: 100px;
+
+	
+}
+/*Setting colour, text-decortaion, font size and font type of list items, also defining how long the transition period of animation is */
+nav a {
+	color: #7E7E7E;
+	font-size: 16px;
+  	width: 20%;
+  	text-decoration: none;
+  	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+
+	
+}
+/* What will happen on mouse hover- animation takes place */
+.one ~ hr {
+  margin-left: -2.9%;
+}
+
+.two:hover ~ hr {
+  margin-left: 16.1%;
+}
+
+.three:hover ~ hr {
+  margin-left: 34.5%;
+}
+
+.four:hover ~ hr {
+  margin-left: 54.5%;
+}
+
+.five:hover ~ hr {
+  margin-left: 78.1%;
+}
+
+hr {
+  height: .25rem;
+  width: 12%;
+  margin: 0px 0px 0px 0px;
+
+  background: #228b22;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  
+
+  border: none;
+  outline: none;
+  background-color: inherit;
+  
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 70px 12px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+
+	position: absolute;
+	top: 300%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #228b22;
+	height:75px;
+	width:100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+}
+/* Positioning for footer and text colour */
+#footertext {
+	
+	color: white;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+
+
+.homepagetxt {
+
+	position:absolute;
+	top: 19%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:90%;
+
+
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+
+	padding-top: 50px;
+
+	font-size:40px;
+	color: #7E7E7E;
+}
+
+.homepagetxtlinetwo {
+
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	font-size:22px;
+	padding-top: 25px;
+	color: #7E7E7E;
+
+}
+
+
+.searchBoxContainer {
+
+	margin:auto;
+	margin-top:60px;
+	position:relative;
+	width:600px;
+	height:42px;
+	border: 4px solid #228b22;
+	padding:0px 10px;
+	border-radius:50px;
+	background-color:white;
+	text-decoration:none;
+
+}
+
+.elementsContainer {
+
+	width:100%;
+	height: 100%;
+	text-decoration: none;
+	
+
+}
+
+.search {
+
+	border: none;
+	height: 100%;
+	width: 89%;
+	
+	padding-left:5px;
+	padding-top:3px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-family: 'Work Sans', sans-serif;
+	color:#228b22;
+	font-weight:bold;
+	
+
+}
+
+.search:focus {
+
+	outline:none;
+
+
+}
+
+.search-button {
+
+	color:blue;
+	float:right;
+	
+	border-radius: 0%;
+	border: 2px solid #228b22;
+	background-color:white;
+	font-family: 'Work Sans', sans-serif;
+	color:#228b22;
+	font-weight: bold;
+	padding-top:3px;
+	padding-bottom:3px;
+
+
+}
+
+
+
+.googlemapscontainer {
+
+	width:90%;
+	position: absolute;
+	top: 81%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #EEEEEE;
+
+	border-radius: 25px;
+
+
+	
+
+}
+
+#myMap {
+   height: 400px;
+   width: 60%;
+   margin-left:20%;
+   margin-top:75px;
+
+}
+
+#address {
+	margin-left:20%;
+	margin-top:20px;
+	margin-bottom:30px;
+	width: 60%;
+
+}
+
+
+#slider {
+	overflow: hidden;
+	height: 20%;
+   	width: 80%;
+   	margin-left:10%;
+   	margin-top:50px;
+   	margin-bottom:50px;
+}
+
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+
+#slider figure img {
+
+	width: 20%;
+	float:left;
+
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+
+
+}
+
+.aboutpagecontainer {
+
+	width:90%;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #EEEEEE;
+
+	border-radius: 25px;
+	
+
+}
+
+.abouttextcontainer {
+
+	width:90%;
+	position: absolute;
+	top: 167%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #EEEEEE;
+
+	border-radius: 25px;
+	
+
+}
+
+.abouttextcontainer p {
+
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	font-size:18px;
+	color: #228b22;
+	padding-left:40px;
+	padding-right:40px;
+	text-align:center;
+	
+
+}
+
+
+.container-fluid {
+
+	width:80%;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+.accordion {
+
+	width: 100%;
+	padding-left: 20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border: 2px solid #228b22;
+	cursor: pointer;
+	border-radius: 50px;
+	display: flex;
+	margin: 10px 0;
+	align-items: center;
+
+
+}
+
+
+.accordion h5 {
+
+	font-size: 22px;
+	margin: 0;
+	padding: 3px 0 0 0;
+	font-weight: normal;
+	color: #228b22;
+	transition:all .5s ease-in;
+	font-family: 'Work Sans', sans-serif;
+
+}
+
+.active {
+	background-color:#228b22;
+	color:white;
+}
+
+.active h5 {
+	color: white;
+}
+
+
+.panel {
+
+	padding: 0 15px;
+	border-left: 1px solid #228b22;
+	margin-left: 25px;
+	font-size: 14px;
+	text-align: justify;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .5s ease-in;
+	font-family: 'Work Sans', sans-serif;
+
+
+}
+
+.faqpagecontainer {
+
+	width:90%;
+	position: absolute;
+	top: 67%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #EEEEEE;
+	max-height:500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align:justify;
+
+	border-radius: 25px;
+	
+
+}
+
+/* Styling the scrollbar */
+.faqpagecontainer::-webkit-scrollbar {
+  width: 0px;
+  
+}
+
+/*
+.faqpagecontainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.faqpagecontainer::-webkit-scrollbar-thumb {
+  background-color: #228b22 ;
+  border-radius: 20px;
+  
+}
+
+*/
+
+
+.loginbox, .forgotpasswordbox, .addeventcontainer {
+
+	width:90%;
+	height: 420px;
+	background:#EEEEEE;
+	color: #000;
+	top:55%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 25px;
+	font-family: 'Work Sans', sans-serif;
+	text-align:center;
+
+
+}
+
+
+
+.avatar {
+
+	position:absolute;
+	top:-50px;
+	left: calc(50% - 50px);
+
+}
+
+.loginbox h1, .forgotpasswordbox h1 {
+
+	margin: 0;
+	padding: 0 0 10px;
+	text-align:center;
+	font-size:22px;
+	font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.loginbox p, .forgotpasswordbox h1 {
+
+	margin:0;
+	padding:0;
+	padding-top:20px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.loginbox input, .forgotpasswordbox h1 {
+	width: 100%
+	margin-bottom:20px;
+}
+
+.loginbox input[type="text"], input[type="password"], input[type="email"], .forgotpasswordbox input[type="text"] 
+{
+
+	border:none;
+	border-bottom: 1px solid #228b22;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	font-family: 'Work Sans', sans-serif;
+
+
+
+}
+
+.loginbox button, .forgotpasswordbox input[type="submit"]
+{
+	border: 2px solid #228b22;;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:30px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.loginbox button:hover, .forgotpasswordbox input[type="submit"]:hover, .loginbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.loginbox a, .forgotpasswordbox a {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: black;
+
+}
+
+.loginbox a:hover, .forgotpasswordbox a:hover
+{
+	color:#228b22;
+}
+
+.registerbox {
+
+	width:90%;
+	height: 800px;
+	background:#EEEEEE;
+	color: #000;
+	top:90%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.registerbox p {
+
+	margin:0;
+	padding:0;
+	padding-top:30px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.registerbox input {
+	width: 100%
+	margin-bottom:20px;
+}
+
+.registerbox input[type="text"]
+{
+
+	border:none;
+	border-bottom: 1px solid #228b22;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	font-family: 'Work Sans', sans-serif;
+
+
+}
+
+.registerbox button
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.registerbox button:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+
+.addeventcontainer {
+
+	margin: 0;
+	padding: 0 0 10px;
+	font-size:22px;
+
+	width:90%;
+	height:1300px;
+	background:#EEEEEE;
+	color: #000;
+	top:122%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.leftsidebox {
+
+	width:40%;
+	float:left;
+	padding-left: 5%;
+	padding-right: 10%;
+
+
+}
+
+.rightsidebox {
+
+	width:40%;
+	float:left;
+
+}
+
+.descriptionbox {
+
+	width:90%;
+	padding-left:5%;
+	padding-top:5%;
+	
+
+
+}
+
+.descriptionbox input[type="text"] {
+
+	 padding-top: 20px; 
+	 padding-bottom:20px;
+	
+
+}
+
+
+.headline { 
+
+	padding-top:79px;
+	
+	
+	border-bottom:0.5px solid #228b22;
+	
+
+}
+
+
+.line {
+
+	border-bottom:2px solid #228b22;
+	padding-top:370px;
+
+
+}
+
+.line2 {
+
+	border-bottom:2px solid #228b22;
+	padding-top:150px;
+
+
+}
+
+.addeventcontainer p {
+
+	margin:0;
+	padding:0;
+	padding-top:20px;
+	font-weight:bold;
+	text-align: center;
+	font-size:14px;
+	
+}
+
+.addeventcontainer input {
+	width: 100%
+	margin-bottom:20px;
+}
+
+.addeventcontainer input[type="text"]
+{
+
+	border: 0.5px solid #228b22;
+	background: white;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:14px;
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-bottom:10px;
+	font-family: 'Work Sans', sans-serif;
+
+
+}
+
+.addeventcontainer input[type="submit"]
+{
+	border: 2px solid #228b22;;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:60px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.addeventcontainer input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.addeventcontainer a {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: black;
+
+}
+
+.addeventcontainer a:hover
+{
+	color:#228b22;
+}
+
+.generalsubheading {
+
+	padding-top: 50px;
+}
+
+.subheading {
+
+	padding-top: 50px;
+}
+
+.addeventcontainer h2 {
+
+	margin:0;
+	padding:0;
+
+
+}
+
+.alleventstxt {
+
+	position:absolute;
+	top: 19%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:90%;
+
+
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+
+	padding-top: 50px;
+
+	font-size:40px;
+	color: #7E7E7E;
+
+}
+
+.alleventsbox {
+
+	width:auto;
+	height: 420px;
+	background:#EEEEEE;
+	color: #000;
+
+	
+	
+	
+	box-sizing: border-box;
+
+
+	
+	padding-top: 30px;
+	margin-left:5%;
+	margin-right:5%;
+	margin-bottom:3%;
+
+	
+	border-radius: 25px;
+	
+
+
+	
+}
+
+
+.containerevents {
+	width: auto;
+	margin: auto;
+	position:relative;
+	min-height: 35vh;
+	text-decoration:none;
+}
+
+
+.eventtitle {
+
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	text-align:center;
+	font-size: 30px;
+	color: #228b22;
+
+
+}
+
+.alleventsbox a {
+
+	text-decoration:none;
+}
+
+.eventdetails {
+
+	padding-top:20px;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+	font-size:18px;
+
+}
+
+.eventdetailslink {
+
+	text-decoration: none;
+	color:#228b22;
+}
+
+
+.addeventbox {
+
+	width:90%;
+	height: 1150px;
+	background:#EEEEEE;
+	color: #000;
+	top:115%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.addeventbox p {
+
+	margin:0;
+	padding:0;
+	padding-top:30px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.addeventbox input {
+	width: 100%
+	margin-bottom:20px;
+}
+
+.addeventbox input[type="text"], .addeventbox input[type="number"]
+{
+
+	border:none;
+	border-bottom: 1px solid #228b22;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	font-family: 'Work Sans', sans-serif;
+
+
+}
+
+.addeventbox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.addeventbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.submissiontext {
+
+	font-size:32px;
+	padding-top:50px;
+	font-family: 'Work Sans', sans-serif;
+	color: #228b22;
+}
+
+.youreventbox {
+
+	width:90%;
+	height: 700px;
+	background:#EEEEEE;
+	color: #000;
+	top:80%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	text-decoration:none;
+	text-align:center;
+
+
+}
+
+.youreventstext {
+
+	font-family: 'Montserrat', sans-serif;
+	color: #228b22;
+	padding-top:30px;
+
+
+}
+
+.nounderline {
+
+	text-decoration:none;
+}
+
+.showeventbox {
+
+	width:90%;
+	height: 800px;
+	background:#EEEEEE;
+	color: #000;
+	top:90%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.showeventbox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.showeventbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.messagehostbox {
+
+	width:90%;
+	height: 400px;
+	background:#EEEEEE;
+	color: #000;
+	top:65%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.messagehostbox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.messagehostbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.deleteeventbox {
+
+	width:90%;
+	height: 300px;
+	background:#EEEEEE;
+	color: #000;
+	top:55%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.deleteeventbox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.deleteeventbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+
+.showmessagebox {
+
+	width:90%;
+	height: 500px;
+	background:#EEEEEE;
+	color: #000;
+	top:70%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.showmessagebox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.showmessagebox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.composemessagebox {
+
+	width:90%;
+	height: 400px;
+	background:#EEEEEE;
+	color: #000;
+	top:65%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	font-family: 'Work Sans', sans-serif;
+	border-radius: 25px;
+	
+	text-align:center;
+
+
+}
+
+.composemessagebox input[type="submit"]
+{
+	border: 2px solid #228b22;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:40px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.composemessagebox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.settingsbox {
+
+	width:90%;
+	height:525px;
+	background:#EEEEEE;
+	color: #000;
+	top:70%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 10px 30px;
+	border-radius: 25px;
+	font-family: 'Work Sans', sans-serif;
+	text-align:center;
+
+
+}
+
+
+
+
+.settingsbox p {
+
+	margin:0;
+	padding:0;
+	padding-top:20px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.settingsbox input {
+	width: 100%
+	margin-bottom:20px;
+}
+
+.settingsbox input[type="text"], .settingsbox input[type="email"]
+{
+
+	border:none;
+	border-bottom: 1px solid #228b22;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	font-family: 'Work Sans', sans-serif;
+
+
+
+}
+
+.settingsbox button
+{
+	border: 2px solid #228b22;;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:30px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.settingsbox button:hover 
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.settingsbox a {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: black;
+
+}
+
+.settingsbox a:hover
+{
+	color:#228b22;
+}
+
+.passwordresetbox {
+
+	width:90%;
+	height: 250px;
+	background:#EEEEEE;
+	color: #000;
+	top:50%;
+	left: 50%;
+	position:absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 25px;
+	font-family: 'Work Sans', sans-serif;
+	text-align:center;
+
+
+}
+
+.passwordresetbox h1 {
+
+	margin: 0;
+	padding: 0 0 10px;
+	text-align:center;
+	font-size:22px;
+	font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.passwordresetboxbox h1 {
+
+	margin:0;
+	padding:0;
+	padding-top:20px;
+	font-weight:bold;
+	text-align: center;
+}
+
+.passwordresetbox input{
+	width: 100%
+	margin-bottom:20px;
+}
+
+.passwordresetbox input[type="text"], input[type="password"], input[type="email"]
+{
+
+	border:none;
+	border-bottom: 1px solid #228b22;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	width:100%;
+	font-family: 'Work Sans', sans-serif;
+
+
+
+}
+
+.passwordresetbox button
+{
+	border: 2px solid #228b22;;
+	outline:none;
+	height: 40px;
+	width:40%;
+	background: #228b22;
+	color: white;
+	font-size:18px;
+	border-radius: 20px;
+	margin-top:30px;
+	margin-bottom:30px;
+	font-family: 'Work Sans', sans-serif;
+	
+
+}
+
+.passwordresetbox button:hover, .passwordresetbox input[type="submit"]:hover, .passwordresetbox input[type="submit"]:hover
+{
+
+	cursor: pointer;
+	background: white;
+	color: #228b22;
+
+}
+
+.passwordresetbox a {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: black;
+
+}
+
+.passwordresetbox a:hover
+{
+	color:#228b22;
+}

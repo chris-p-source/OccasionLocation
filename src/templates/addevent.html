@@ -1,0 +1,163 @@
+<!--PAGE IS NO LONGER BEING USED-->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Link to style sheet-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+<!--Title of the page-->
+<title>OccasionLocation</title>
+
+<header>
+  <!--Container for nav bar-->
+  <div class="container">
+    <!--Logo-->
+    
+    <img id="logo" src="{% static 'src/images/logo.png' %}" alt="OccasionLocation" width="300" height="75">
+    <nav>
+      <ul>
+        <!--Nav bar items and the links they will take user to on click-->
+        <li class="one"><a href="{% url 'home' %}">Home</a></li>
+        <li class="two"><a href="{% url 'about' %}">About</a></li>
+        <li class="three"><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="four"><a href="{% url 'addevent' %}">Add Event</a></li>
+        <li class="five"><a href="{% url 'login' %}">Sign In</a></li>
+        <hr />
+      </ul>
+    </nav>
+    <div class="headline"></div>
+  </div>
+</header>
+</head>
+
+<body>
+	
+<section> 
+
+  
+
+  <!--Leading text-->
+  <div class="homepagetxt">
+  <span style="color: #228b22">Add Event</span><br/>
+
+</div>
+
+<div class="addeventcontainer">
+
+      <form>
+
+        <div class="generalsubheading">
+          <h2> General </h2>
+        </div>
+
+          <div class="leftsidebox">
+          <p>First Name</p>
+          <input type="text" name="" placeholder="Enter first name">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Last Name</p>
+          <input type="text" name="" placeholder="Enter last name">
+          </div>
+
+          <div class="leftsidebox">
+          <p>Email address</p>
+          <input type="text" name="" placeholder="Enter email address">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Mobile Number</p>
+          <input type="text" name="" placeholder="Enter mobile number">
+          </div>
+
+          <br>
+
+          <div class="leftsidebox">
+          <p>Address Line 1</p>
+          <input type="text" name="" placeholder="Enter address Line 1">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Town</p>
+          <input type="text" name="" placeholder="Enter town">
+          </div>  
+          
+          <br>
+
+          <div class="leftsidebox">
+          <p>County</p>
+          <input type="text" name="" placeholder="Enter county">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Postcode</p>
+          <input type="text" name="" placeholder="Enter postcode name">
+          </div> 
+
+          <br>
+
+
+          <div class="line"></div>
+
+
+
+          <div class="subheading"><h2> Event details </h2></div>
+          
+          <div class="leftsidebox">
+          <p>Start time</p>
+          <input type="text" name="" placeholder="Enter start time">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Genre</p>
+          <input type="text" name="" placeholder="Enter genre">
+          </div>
+
+          <br>
+
+           
+          
+          <div class="descriptionbox">
+          <p>Description</p> 
+          <input type="text" name="descriptionbox" placeholder="Enter description">
+          </div>
+
+          <div class="leftsidebox">
+          <p>Price</p>
+          <input type="text" name="" placeholder="Enter price">
+          </div>
+
+          <div class="rightsidebox">
+          <p>Duration</p>
+          <input type="text" name="" placeholder="Enter duration">
+          </div>
+
+          <div class="line2"></div>
+
+          <div class="subheading"><h2> Extra detail </h2></div>
+
+          <input type="submit" name="" value="Submit"><br>
+
+
+        </form>
+
+</div>
+
+
+</section>
+<footer> 
+  <!--Text visible in footer-->
+  <p id="footertext"> OccasionLocation &copy;</p>
+</footer>
+</body>
+</html>

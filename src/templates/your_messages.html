@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Link to style sheet-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!--Title of the page-->
+<title>OccasionLocation</title>
+
+<header>
+  <!--Container for nav bar-->
+  <div class="containerevents">
+    <!--Logo-->
+    
+    <img id="logo" src="{% static 'src/images/logo.png' %}" alt="OccasionLocation" width="300" height="75">
+    <nav>
+      <ul>
+        <!--Nav bar items and the links they will take user to on click-->
+        <li class="one"><a href="{% url 'home' %}">Home</a></li>
+        <li class="two"><a href="{% url 'about' %}">About</a></li>
+        <li class="three"><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="four"><a href="{% url 'list-events' %}">All Events</a></li>
+        
+
+
+        <li class="five">
+          
+
+
+          {% if request.user.is_authenticated %}
+
+          <div class="dropdown">
+              <a class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+              </a>
+            <div class="dropdown-content">
+                <a href="{% url 'add-event' %}">Add Event</a>
+                <a href="{% url 'your-events' %}">Your Events</a>
+                <a href="{% url 'your-messages' %}">Messages</a>
+                <a href="{% url 'settings' %}">Settings</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+          </div>
+
+
+          {% else %}
+            <a href="{% url 'login' %}">Sign In</a></li>
+          
+
+
+
+
+          {% endif %}
+        </li>  
+        
+
+
+        <hr />
+      </ul>
+    </nav>
+    <div class="headline"></div>
+  </div>
+</header>
+</head>
+
+<body>
+  
+<section> 
+
+  
+
+  <!--Leading text-->
+  <div class="homepagetxt">
+    Messages
+  </div>
+
+
+<div class="youreventbox">
+
+<center>
+
+<h1><a class="nounderline" style="color:#228b22" href="{% url 'new-message' %}"><u> Compose new message </u></a></h1>
+
+</center>
+  
+<center>
+
+  
+  <br/>
+  <h1>New (Messages you havent replied to yet)</h1>
+    {% for message in new_list %}
+     <a class="nounderline" style="color:#228b22" href="{% url 'show-message' message.id %}">From: {{ message.sender.firstname }} {{ message.sender.lastname }} - {{ message.msg_content }}</a><br/>
+
+
+  {% endfor %}
+
+</center>
+
+
+
+<center>
+
+  <br/>
+  <h1>Inbox (Messages you have recieved and replied to)</h1>
+  {% for message in inbox_list %}
+     <a class="nounderline" style="color:#228b22" href="{% url 'show-message' message.id %}">From: {{ message.sender.firstname }} {{ message.sender.lastname }} - {{ message.msg_content }}</a><br/>
+
+
+  {% endfor %}
+
+
+
+</center>
+
+
+
+<center>
+
+  <br/>
+  <h1>Outbox (Messages you have sent)</h1>
+  {% for message in outbox_list %}
+    To: {{ message.reciever.firstname }} {{ message.reciever.lastname }} - {{ message.msg_content }}</a><br/>
+    
+
+  {% endfor %}
+
+
+
+</center>
+  
+
+
+</div>
+
+
+
+
+
+<footer> 
+  <!--Text visible in footer-->
+  <p id="footertext"> OccasionLocation &copy;</p>
+</footer>
+</body>
+</html>

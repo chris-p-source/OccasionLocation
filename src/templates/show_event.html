@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Link to style sheet-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!--Title of the page-->
+<title>OccasionLocation</title>
+
+<header>
+  <!--Container for nav bar-->
+  <div class="containerevents">
+    <!--Logo-->
+    
+    <img id="logo" src="{% static 'src/images/logo.png' %}" alt="OccasionLocation" width="300" height="75">
+    <nav>
+      <ul>
+        <!--Nav bar items and the links they will take user to on click-->
+        <li class="one"><a href="{% url 'home' %}">Home</a></li>
+        <li class="two"><a href="{% url 'about' %}">About</a></li>
+        <li class="three"><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="four"><a href="{% url 'list-events' %}">All Events</a></li>
+        
+
+
+        <li class="five">
+          
+
+
+          {% if request.user.is_authenticated %}
+
+          <div class="dropdown">
+              <a class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+              </a>
+            <div class="dropdown-content">
+                <a href="{% url 'add-event' %}">Add Event</a>
+                <a href="{% url 'your-events' %}">Your Events</a>
+                <a href="{% url 'your-messages' %}">Messages</a>
+                <a href="{% url 'settings' %}">Settings</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+          </div>
+
+
+          {% else %}
+            <a href="{% url 'login' %}">Sign In</a></li>
+          
+
+
+
+
+          {% endif %}
+        </li>  
+        
+
+
+        <hr />
+      </ul>
+    </nav>
+    <div class="headline"></div>
+  </div>
+</header>
+</head>
+
+<body>
+  
+<section> 
+
+  
+
+  <!--Leading text-->
+  <div class="homepagetxt">
+    {{ event }}
+  </div>
+
+  <div class="showeventbox">
+<center>
+
+  
+
+  <br/>
+  <br/>
+  <b>Hosted By: </b> <br/>{{ event.host.firstname}} {{event.host.lastname}} - {{event.host.email}} - <a class="nounderline" style="color:#228b22" href="{% url 'message-host' event.id %}"><u>Message {{ event.host.firstname }}</u></a> <br/>
+  <br/>
+  <b>Date:</b> <br/>{{ event.date }}<br/>
+  <br/>
+  <b>Address:</b> <br/>{{ event.address }}<br/>
+  <br/>
+  <b>Town:</b> <br/>{{ event.town }}<br/>
+  <br/>
+  <b>County:</b> <br/>{{ event.county }}<br/>
+  <br/>
+  <b>Postcode:</b> <br/>{{ event.postcode }}<br/>
+  <br/>
+  <b>Start Time:</b> <br/>{{ event.starttime }}<br/>
+  <br/>
+  <b>Genre:</b> <br/>{{ event.genre }}<br/>
+  <br/>
+  <b>Description:</b> <br/>{{ event.description }}<br/>
+  <br/>
+  <b>Price:</b> <br/>{{ event.price }}<br/>
+  <br/>
+  <b>Duration:</b> <br/>{{ event.duration }}<br/>
+
+
+</center>
+<center>
+
+     {% if submitted %}
+     <div class="submissiontext"> Attendance confirmed!</div>
+
+    {% else %}
+
+      <form action="" method=POST>
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+
+        <input type="submit" value="Sign up">
+
+      </form>
+      
+    {% endif %}  
+
+
+
+</center>
+</div>
+
+
+<footer> 
+  <!--Text visible in footer-->
+  <p id="footertext"> OccasionLocation &copy;</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Link to style sheet-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!--Title of the page-->
+<title>OccasionLocation</title>
+
+<header>
+  <!--Container for nav bar-->
+  <div class="containerevents">
+    <!--Logo-->
+    
+    <img id="logo" src="{% static 'src/images/logo.png' %}" alt="OccasionLocation" width="300" height="75">
+    <nav>
+      <ul>
+        <!--Nav bar items and the links they will take user to on click-->
+        <li class="one"><a href="{% url 'home' %}">Home</a></li>
+        <li class="two"><a href="{% url 'about' %}">About</a></li>
+        <li class="three"><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="four"><a href="{% url 'list-events' %}">All Events</a></li>
+        
+
+
+        <li class="five">
+          
+
+
+          {% if request.user.is_authenticated %}
+
+          <div class="dropdown">
+              <a class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+              </a>
+            <div class="dropdown-content">
+                <a href="{% url 'add-event' %}">Add Event</a>
+                <a href="{% url 'your-events' %}">Your Events</a>
+                <a href="{% url 'your-messages' %}">Messages</a>
+                <a href="{% url 'settings' %}">Settings</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+          </div>
+
+
+          {% else %}
+            <a href="{% url 'login' %}">Sign In</a></li>
+          
+
+
+
+
+          {% endif %}
+        </li>  
+        
+
+
+        <hr />
+      </ul>
+    </nav>
+    <div class="headline"></div>
+  </div>
+</header>
+</head>
+
+<body>
+	
+<section> 
+
+   
+
+  <!--Leading text-->
+  <div class="homepagetxt">
+    Update <span style="color: #228b22">Event</span>
+  <br/>
+</div>
+
+
+<center>
+
+  <div class="addeventbox">
+
+  <form action="" method=POST>
+    {% csrf_token %}
+
+  <br/>
+        <br/>
+        <b>Title:</b> {{ form.title }}
+        <br/>
+        <br/>
+        <b>Date:</b> {{ form.date }}
+        <br/>
+        <br/>
+        <b>Address:</b> {{ form.address }}
+        <br/>
+        <br/>
+        <b>Town:</b> {{ form.town }}
+        <br/>
+        <br/>
+        <b>County:</b> {{ form.county }}
+        <br/>
+        <br/>
+        <b>Postcode:</b> {{ form.postcode }}
+        <br/>
+        <br/>
+        <b>Start Time (24 hour format):</b> {{ form.starttime }}
+        <br/>
+        <br/>
+        <b>Genre:</b> {{ form.genre }}
+        <br/>
+        <br/>
+        <b>Description:</b> {{ form.description }}
+        <br/>
+        <br/>
+        <b>Price:</b> {{ form.price }}
+        <br/>
+        <br/>
+        <b>Duration (In hours):</b> {{ form.duration }}
+        <br/>
+  
+  <br/>
+
+  <input type="submit" value="Update">
+
+
+
+</form>
+
+</div>
+
+</center>
+
+
+
+
+
+
+
+
+
+</section>
+<footer> 
+  <!--Text visible in footer-->
+  <p id="footertext"> OccasionLocation &copy;</p>
+</footer>
+</body>
+</html>

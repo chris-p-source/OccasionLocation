@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Link to style sheet-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+<!--Title of the page-->
+<title>OccasionLocation</title>
+
+<header>
+  <!--Container for nav bar-->
+  <div class="container">
+    <!--Logo-->
+    
+    <img id="logo" src="{% static 'src/images/logo.png' %}" alt="OccasionLocation" width="300" height="75">
+    <nav>
+      <ul>
+        <!--Nav bar items and the links they will take user to on click-->
+        <li class="one"><a href="{% url 'home' %}">Home</a></li>
+        <li class="two"><a href="{% url 'about' %}">About</a></li>
+        <li class="three"><a href="{% url 'faq' %}">FAQ</a></li>
+        <li class="four"><a href="{% url 'list-events' %}">All Events</a></li>
+        
+
+
+        <li class="five">
+          
+
+
+          {% if request.user.is_authenticated %}
+
+          <div class="dropdown">
+              <a class="dropbtn">Account
+                <i class="fa fa-caret-down"></i>
+              </a>
+            <div class="dropdown-content">
+                <a href="{% url 'add-event' %}">Add Event</a>
+                <a href="{% url 'your-events' %}">Your Events</a>
+                <a href="{% url 'your-messages' %}">Messages</a>
+                <a href="{% url 'settings' %}">Settings</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+          </div>
+
+
+          {% else %}
+            <a href="{% url 'login' %}">Sign In</a></li>
+          
+
+
+
+
+          {% endif %}
+        </li>  
+        
+
+
+        <hr />
+      </ul>
+    </nav>
+    <div class="headline"></div>
+  </div>
+</header>
+</head>
+
+<body>
+	
+<section> 
+
+   
+
+  <!--Leading text-->
+  <div class="homepagetxt">
+    Frequently Asked <span style="color: #228b22">Questions </span>
+  <br/>
+
+</div>
+
+<div class="faqpagecontainer">
+
+  <div class="container-fluid">
+
+    <div class="accordion">
+      <h5> How do I make a booking? </h5>
+    </div>
+    <div class="panel">
+      <p> You can make a booking by logging into your account (registering if you dont have one), searching for an event, clicking on details and then clicking book. </p>
+    </div>
+
+
+    <div class="accordion">
+      <h5> Do I have a limit on how many events I can book? </h5>
+    </div>
+    <div class="panel">
+      <p> There is currently not a set limit on how many events you can book at once. </p>
+
+    </div>
+
+
+    <div class="accordion">
+      <h5> How do I cancel my booking? </h5>
+    </div>
+    <div class="panel">
+      <p> You can cancel your booking by clicking on your name once logged in to open your account settings where you are able to see all of your bookings, from here they can easily be removed by clicking "Remove".</p>
+
+    </div>
+
+
+    <div class="accordion">
+      <h5> Is there a limit on how many extra people I can bring? </h5>
+    </div>
+    <div class="panel">
+      <p> This is dependent on event to event. If you are concerned please get in touch with the event host. </p>
+
+    </div>
+
+    <div class="accordion">
+      <h5> How do i create an event as a host? </h5>
+    </div>
+    <div class="panel">
+      <p> You can create an event by clicking on "Add event" on the home page. From here you can enter the details about your event and click "Publish" in order to make the listing live. </p>
+
+    </div>
+
+    <div class="accordion">
+      <h5> How do i change the details of my event? </h5>
+    </div>
+    <div class="panel">
+      <p> The details of your event can be changed by clicking on your username, going to my events and clicking the "Change" button. </p>
+
+    </div>
+
+    <div class="accordion">
+      <h5> Is there a limit on how many event I can host at once? </h5>
+    </div>
+    <div class="panel">
+      <p> There currently isnt a limit on the number of events you can host at once. You will be alerted however if you try to host at the same time that you are already hosting one. </p>
+
+    </div>
+
+    <div class="accordion">
+      <h5> Is there a limit to how many events I can host in a certain time range? </h5>
+    </div>
+    <div class="panel">
+      <p> There is currently no limit to the amount of events you can host within a certain time range. </p>
+
+    </div>
+
+    <div class="accordion">
+      <h5> What happens if i need to cancel my event? </h5>
+    </div>
+    <div class="panel">
+      <p> Events can be cancelled by clicking on your username, going to my events and clicking the "Cancel" button.</p>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<script>
+
+var acc = document.getElementsByClassName('accordion');
+var i;
+var len = acc.length;
+var isClicked;
+
+for(i = 0; i < len; i++) {
+  acc[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var panel = this.nextElementSibling;
+    if(panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px'
+      }
+  })
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</section>
+<footer> 
+  <!--Text visible in footer-->
+  <p id="footertext"> OccasionLocation &copy;</p>
+</footer>
+</body>
+</html>
